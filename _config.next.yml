@@ -179,9 +179,9 @@ site_state: true
 social:
   GitHub: https://github.com/zhaozhiwei1992 || fab fa-github
   知乎: https://www.zhihu.com/people/p205/posts || fab fa-zhihu
-  简书: https://www.jianshu.com/u/65f51bc73109 || fab fa-github
+  简书: https://www.jianshu.com/u/65f51bc73109 || fas fa-book-open
   博客园: https://www.cnblogs.com/qq347061329 || fab fa-blog
-  CSDN: https://blog.csdn.net/u012768510 || fab fa-github
+  CSDN: https://blog.csdn.net/u012768510 || fas fa-code
   E-Mail: mailto:zhaozhiweishanxi@gmail.com || fa fa-envelope
   #Weibo: https://weibo.com/yourname || fab fa-weibo
   #Google: https://plus.google.com/yourname || fab fa-google
