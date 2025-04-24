@@ -273,11 +273,11 @@ reward_settings:
   # If true, reward will be displayed in every article by default.
   enable: true
   animation: true
-  comment: 坚持原创技术分享，您的支持将鼓励我继续创作！
+  comment: 公众号:陌上花kai
 
 reward:
-  wechatpay: /images/wechatpay.jpeg
-  alipay: /images/wechatpay.jpeg
+  wechatpay: /images/wechat.png
+  #alipay: /images/wechatpay.png
   #paypal: /images/paypal.png
   #bitcoin: /images/bitcoin.png
 
@@ -888,7 +888,7 @@ three:
 # Dependencies: https://github.com/theme-next/theme-next-canvas-ribbon
 # For more information: https://github.com/zproo/canvas-ribbon
 canvas_ribbon:
-  enable: false
+  enable: true
   size: 300 # The width of the ribbon
   alpha: 0.6 # The transparency of the ribbon
   zIndex: -1 # The display level of the ribbon
