@@ -2,8 +2,8 @@
 title: "腾讯云SSL证书自动续期"
 date: "2025-09-25"
 updated: "2025-09-25"
-tags: [ECS,SSL**
-categories: SSL,证书,ECS,腾讯云
+tags: [ECS,SSL]
+categories: [SSL,证书,ECS,腾讯云]
 ---
 
 # 前言
