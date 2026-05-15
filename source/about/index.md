@@ -33,5 +33,5 @@ tags: about
 
 ## 微信公众号
 
-![陌上花kai](https://43.143.194.245/minio/images/search_wechat.png)
+![陌上花kai](https://19921514.xyz/fb/api/public/dl/3kDTYR8d/search_wechat.png?inline=true)
 

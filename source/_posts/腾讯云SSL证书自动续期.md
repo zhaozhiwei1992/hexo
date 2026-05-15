@@ -34,8 +34,8 @@ Certd是一个免费的全自动证书管理系统，让你的网站证书永不
 # certd部署(docker方式)
 ## 环境准备
 一台云服务器,并且已经安装好docker。我这里部署和使用是一台机器。一定要开放7001、7002端口，可以只开一个，用于certd访问。
-![](http://43.143.194.245:9000/images/certd/images/001.png)
-![](http://43.143.194.245:9000/images/certd/images/002.png)
+![](https://19921514.xyz/fb/api/public/dl/3kDTYR8d/certd/images/001.png?inline=true)
+![](https://19921514.xyz/fb/api/public/dl/3kDTYR8d/certd/images/002.png?inline=true)
 ## 部署
 1. 下载: wget https://gitee.com/certd/certd/raw/v2/docker/run/docker-compose.yaml
 2. 启动: docker-compose up -d
@@ -55,27 +55,27 @@ https://your_server_ip:7002
 1. 已部署CertD服务（可官方Demo自助注册体验 https://certd.handfree.work/ ）
 2. 注册一个域名（腾讯云DnsPod），既然都要自动续期了，肯定已经有域名了。
 3. 准备好以上DNS解析服务商的AccessKey 和 AccessSecret
-![](http://43.143.194.245:9000/images/certd/images/003.png)
-![](http://43.143.194.245:9000/images/certd/images/004.png)
+![](https://19921514.xyz/fb/api/public/dl/3kDTYR8d/certd/images/003.png?inline=true)
+![](https://19921514.xyz/fb/api/public/dl/3kDTYR8d/certd/images/004.png?inline=true)
 ## 自动化流水线创建
 1. 创建证书申请部署流水线
-![](http://43.143.194.245:9000/images/certd/images/005.png)
-![](http://43.143.194.245:9000/images/certd/images/006.png)
-![](http://43.143.194.245:9000/images/certd/images/00601.png)
+![](https://19921514.xyz/fb/api/public/dl/3kDTYR8d/certd/images/005.png?inline=true)
+![](https://19921514.xyz/fb/api/public/dl/3kDTYR8d/certd/images/006.png?inline=true)
+![](https://19921514.xyz/fb/api/public/dl/3kDTYR8d/certd/images/00601.png?inline=true)
 2. 流水线详情
 到这一步申请证书就已经配置完成了。 点击手动触发，就可以申请证书了。下边是申请证书的日志输出信息。
-![](http://43.143.194.245:9000/images/certd/images/007.png)
+![](https://19921514.xyz/fb/api/public/dl/3kDTYR8d/certd/images/007.png?inline=true)
 3. 添加部署到服务器主机任务
-![](http://43.143.194.245:9000/images/certd/images/008.png)
-![](http://43.143.194.245:9000/images/certd/images/009.png)
-![](http://43.143.194.245:9000/images/certd/images/00901.png)
+![](https://19921514.xyz/fb/api/public/dl/3kDTYR8d/certd/images/008.png?inline=true)
+![](https://19921514.xyz/fb/api/public/dl/3kDTYR8d/certd/images/009.png?inline=true)
+![](https://19921514.xyz/fb/api/public/dl/3kDTYR8d/certd/images/00901.png?inline=true)
 4. 手动触发执行任务，测试一下
 点击任务可以查看状态和日志，此时证书已经正确部署到服务器。
-![](http://43.143.194.245:9000/images/certd/images/010.png)
+![](https://19921514.xyz/fb/api/public/dl/3kDTYR8d/certd/images/010.png?inline=true)
 5. 查看证书到期时间
-![](http://43.143.194.245:9000/images/certd/images/011.png)
+![](https://19921514.xyz/fb/api/public/dl/3kDTYR8d/certd/images/011.png?inline=true)
 # 使用定时任务
 配置定时触发，以后每天定时执行
 cron格式，例如： 0 19 1 * * * 表示每天凌晨1点19执行
 到期前35天会自动申请新证书并部署，没到期前不会重复申请
-![](http://43.143.194.245:9000/images/certd/images/012.png)
+![](https://19921514.xyz/fb/api/public/dl/3kDTYR8d/certd/images/012.png?inline=true)

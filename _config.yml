@@ -85,8 +85,8 @@ deploy:
 - type: git
   repo: git@github.com:zhaozhiwei1992/zhaozhiwei1992.github.io.git
 #   # example, https://zhaozhiwei1992.github.io/
-- type: git
-  repo: git@gitee.com:zhaozhiwei_1992/zhaozhiwei_1992.git
+#- type: git
+#  repo: git@gitee.com:zhaozhiwei_1992/zhaozhiwei_1992.git
 # http://zhaozhiwei_1992.gitee.io
 
 # Sitemap
