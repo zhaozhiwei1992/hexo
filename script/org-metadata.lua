@@ -33,19 +33,19 @@ function Meta(meta)
     -- 日期格式优化（支持Org-mode带星期的日期）
     if meta.date then
         local raw_date = pandoc.utils.stringify(meta.date)
-        print("[DEBUG] Raw DATE:", raw_date)
+        io.stderr:write("[DEBUG] Raw DATE: " .. raw_date .. "\n")
         meta.date = raw_date:gsub("%[?(%d+-%d+-%d+)%s*%a*%]?", "%1")
-        print("[DEBUG] Processed DATE:", meta.date)
+        io.stderr:write("[DEBUG] Processed DATE: " .. meta.date .. "\n")
     end
 
     -- TAGS 解析增强
     if collected_tags then
-        print("[DEBUG] Raw TAGS:", pandoc.utils.stringify(collected_tags))
+        io.stderr:write("[DEBUG] Raw TAGS: " .. pandoc.utils.stringify(collected_tags) .. "\n")
         local tags_str = pandoc.utils.stringify(collected_tags)
-        print("[DEBUG] TAGS string:", tags_str)
+        io.stderr:write("[DEBUG] TAGS string: " .. tags_str .. "\n")
 
         tags_str = tags_str:sub(1, -2)
-        print("[DEBUG] Cleaned TAGS:", tags_str)
+        io.stderr:write("[DEBUG] Cleaned TAGS: " .. tags_str .. "\n")
 
         meta.tags = {}
         table.insert(meta.tags, pandoc.Str(tags_str))
@@ -53,7 +53,7 @@ function Meta(meta)
 
     -- CATEGORIES 解析增强
     if collected_categories then
-        print("[DEBUG] Raw COTEGORIES:", pandoc.utils.stringify(collected_categories))
+        io.stderr:write("[DEBUG] Raw COTEGORIES: " .. pandoc.utils.stringify(collected_categories) .. "\n")
         local categories_str = pandoc.utils.stringify(collected_categories)
 
         categories_str = categories_str:sub(1, -2)
@@ -63,4 +63,15 @@ function Meta(meta)
     end
 
     return meta
+end
+
+-- org 的 =verbatim= 会带 {.verbatim} class, markdown writer 会输出
+-- `x`{.verbatim} —— hexo 不认识属性语法, 会把 {.verbatim} 当正文显示。
+-- 去掉 class 变成普通 `code`。
+function Code(c)
+    if c.classes:includes('verbatim') then
+        c.classes = {}
+        c.attributes = {}
+    end
+    return c
 end

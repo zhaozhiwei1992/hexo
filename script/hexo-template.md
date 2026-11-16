@@ -9,5 +9,5 @@ categories: ${categories}
 ${body}
 
 ---
-© 陌上花kai
-- 公众号：陌上花kai
+© AI的奴隶
+- 公众号：AI的奴隶
