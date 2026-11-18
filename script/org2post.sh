@@ -13,7 +13,7 @@ set -euo pipefail
 KW=${KW_ROOT:-$HOME/workspace/knowledge-workspace}
 BASE=${IMG_BASE:-https://img.19921514.xyz}
 HEXO=${HEXO_ROOT:-$HOME/workspace/hexo}
-NODE_VER=${NODE_VER:-14.7.0}
+NODE_VER=${NODE_VER:-}
 
 die() { echo "[org2post] 错误: $*" >&2; exit 1; }
 [ $# -ge 2 ] || die "用法: $(basename "$0") <org文件> <post名> [--no-deploy]"
@@ -69,5 +69,7 @@ fi
 export NVM_DIR="$HOME/.nvm"
 # shellcheck disable=SC1091
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
-nvm use "$NODE_VER" >/dev/null
-cd "$HEXO" && hexo g && hexo d
+cd "$HEXO"
+# hexo 8 要求 node >= 20.19；未显式给 NODE_VER 时按 .nvmrc 切
+if [ -n "$NODE_VER" ]; then nvm use "$NODE_VER" >/dev/null; else nvm use >/dev/null; fi
+hexo g && hexo d

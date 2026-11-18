@@ -22,7 +22,7 @@ minify: false
 # Define custom file paths.
 # Create your custom files in site directory `source/_data` and uncomment needed files below.
 custom_file_path:
-  #head: source/_data/head.swig
+  head: source/_data/head.njk
   #header: source/_data/header.swig
   #sidebar: source/_data/sidebar.swig
   #postMeta: source/_data/post-meta.swig
@@ -31,7 +31,7 @@ custom_file_path:
   #bodyEnd: source/_data/body-end.swig
   #variable: source/_data/variables.styl
   #mixin: source/_data/mixins.styl
-  #style: source/_data/styles.styl
+  style: source/_data/styles.styl
 
 # ---------------------------------------------------------------
 # Site Information Settings
@@ -244,14 +244,8 @@ post_meta:
     another_day: true
   categories: true
 
-# Post wordcount display settings
-# Post wordcount display settings
-# Dependencies: https://github.com/willin/hexo-wordcount
-post_wordcount:
-  item_text: true
-  wordcount: true
-  min2read: true
-# Dependencies: https://github.com/theme-next/hexo-symbols-count-time
+# Post wordcount removed: NexT 8 已不再使用 hexo-wordcount，字数/阅读时长走
+# config.symbols_count_time（hexo-symbols-count-time，已在 _config.yml 配好）
 symbols_count_time:
   separated_meta: true
   item_text_post: true
@@ -358,9 +352,9 @@ codeblock:
   highlight_theme: normal
   # Add copy button on codeblock
   copy_button:
-    enable: false
+    enable: true
     # Show text copy result.
-    show_result: false
+    show_result: true
     # Available values: default | flat | mac
     style:
 
@@ -749,7 +743,7 @@ algolia_search:
 # Local Search
 # Dependencies: https://github.com/theme-next/hexo-generator-searchdb
 local_search:
-  enable: false
+  enable: true
   # If auto, trigger search by changing input.
   # If manual, trigger search by pressing enter key or search button.
   trigger: auto

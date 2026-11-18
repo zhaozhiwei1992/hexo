@@ -4,7 +4,8 @@ date: "${date}"
 updated: "${if(updated)}${updated}${else}${date}${endif}"
 tags: [${tags}]
 categories: ${categories}
----
+${if(description)}description: "${description}"
+${endif}---
 
 ${body}
 

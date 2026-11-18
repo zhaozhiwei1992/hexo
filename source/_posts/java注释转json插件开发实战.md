@@ -43,7 +43,7 @@ tags: [maven插件, javadoc]
 
 ### 代码路径
 
-<https:github.com:zhaozhiwei1992/javadoc-json-maven-plugin>
+<https://github.com/zhaozhiwei1992/javadoc-json-maven-plugin>
 
 入口: com.example.Javadoc2JsonMojo#execute
 
@@ -157,7 +157,7 @@ mvn archetype:generate -DgroupId=com.example -DartifactId=javadoc-json-maven-plu
 
 命令格式为mvn groupId:artifactId:version:goal，执行如下命令：
 
-mvn com.<example:javadoc-json-maven-plugin:1.0.0-SNAPSHOT:generate>
+mvn com.example:javadoc-json-maven-plugin:1.0.0-SNAPSHOT:generate
 
 由于我们的插件命名符合规范，所以上面的命令可以简写为：
 

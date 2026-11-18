@@ -38,6 +38,14 @@ function Meta(meta)
         io.stderr:write("[DEBUG] Processed DATE: " .. meta.date .. "\n")
     end
 
+    -- DESCRIPTION: 压成单行、去掉双引号，否则写进 YAML 会破行/破引号
+    if meta.description then
+        local desc = pandoc.utils.stringify(meta.description)
+        -- pandoc 模板会把引号转义成 \' ，YAML 双引号里 \' 非法，直接去掉 ASCII 引号
+        desc = desc:gsub('%s+', ' '):gsub('[\'\"]', ''):gsub('^%s*(.-)%s*$', '%1')
+        meta.description = desc
+    end
+
     -- TAGS 解析增强
     if collected_tags then
         io.stderr:write("[DEBUG] Raw TAGS: " .. pandoc.utils.stringify(collected_tags) .. "\n")

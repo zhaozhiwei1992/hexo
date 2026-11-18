@@ -1,0 +1,30 @@
+{#- 站点/文章 keywords 注入（NexT 8 本身不输出 meta keywords）
+    - 站级：_config.yml 的 keywords（YAML 列表）
+    - 文章级：front-matter 写 keywords: [a, b]，优先生效 #}
+{%- if page.keywords %}
+<meta name="keywords" content="{{ page.keywords | join(', ') }}">
+{%- elif config.keywords %}
+<meta name="keywords" content="{{ config.keywords | join(', ') }}">
+{%- endif %}
+{#- 404 页不让搜索引擎收录 #}
+{%- if page.permalink == '/404.html' %}
+<meta name="robots" content="noindex">
+{%- endif %}
+{#- 文章页 JSON-LD：给 Google/Bing 富摘要用，字段跟着大小写敏感 #}
+{%- if page.layout == 'post' %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": {{ page.title | dump | safe }},
+  "datePublished": "{{ page.date.toISOString() }}",
+  "dateModified": "{{ (page.updated or page.date).toISOString() }}",
+  "author": { "@type": "Person", "name": {{ config.author | dump | safe }} },
+  "publisher": { "@type": "Organization", "name": {{ config.title | dump | safe }} },
+  "mainEntityOfPage": { "@type": "WebPage", "@id": "{{ page.permalink }}" },
+  "inLanguage": {{ config.language | dump | safe }}{% if page.og_image %},
+  "image": [{{ page.og_image | dump | safe }}]{% endif %}{% if page.description %},
+  "description": {{ page.description | dump | safe }}{% endif %}
+}
+</script>
+{%- endif %}
