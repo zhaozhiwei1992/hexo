@@ -10,9 +10,10 @@ tags: about
 
 ## 技术专长
 
+- **AI**: Agent、Harness、Dify、N8N
 - **编程语言**：Java、Python、JavaScript
 - **框架/库**：Spring、SpringBoot、SpringCloud、Node.js、Vue
-- **工具**：Git、Docker、Kubernetes
+- **工具**：Linux、Git、Docker、Kubernetes
 
 ## 教育背景
 
@@ -26,12 +27,4 @@ tags: about
 
 - **邮箱**：[zhaozhiweishanxi@gmail.com]
 - **GitHub**：[https://github.com/zhaozhiwei1992]
-
-## 订阅
-
-想要获取最新的技术分享和博客更新？订阅我的邮件列表，不错过任何精彩内容！
-
-## 微信公众号
-
-![陌上花kai](https://19921514.xyz/fb/api/public/dl/3kDTYR8d/search_wechat.png?inline=true)
 

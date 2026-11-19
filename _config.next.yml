@@ -159,7 +159,7 @@ sidebar:
 # Sidebar Avatar
 avatar:
   # Replace the default image and set the url here.
-  url: /images/avatar.jpg
+  url: /images/avatar.png
   # If true, the avatar will be dispalyed in circle.
   rounded: true
   # If true, the avatar will be rotated with the cursor.
@@ -175,8 +175,6 @@ site_state: true
 social:
   GitHub: https://github.com/zhaozhiwei1992 || fab fa-github
   E-Mail: mailto:zhaozhiweishanxi@gmail.com || fa fa-envelope
-  知乎: https://www.zhihu.com/people/p205/posts || fab fa-zhihu
-  CSDN: https://blog.csdn.net/u012768510 || fas fa-code
   #Weibo: https://weibo.com/yourname || fab fa-weibo
   #Google: https://plus.google.com/yourname || fab fa-google
   #Twitter: https://twitter.com/yourname || fab fa-twitter
@@ -200,6 +198,7 @@ links_settings:
 
 links:
   #Title: http://yoursite.com
+  国内加速: https://blog.19921514.xyz/
 
 # Table of Contents in the Sidebar
 # Front-matter variable (unsupport wrap expand_all).
@@ -260,11 +259,12 @@ reward_settings:
   # If true, reward will be displayed in every article by default.
   enable: true
   animation: true
-  comment: 公众号:陌上花kai
+  comment: 公众号:AI的奴隶
 
+# 赞赏
 reward:
-  wechatpay: /images/wechat.png
-  #alipay: /images/wechatpay.png
+  wechatpay: /images/wechatpay.png
+  alipay: /images/alipay.jpg
   #paypal: /images/paypal.png
   #bitcoin: /images/bitcoin.png
 
@@ -273,8 +273,15 @@ reward:
 follow_me:
   #Twitter: https://twitter.com/username || fab fa-twitter
   #Telegram: https://t.me/channel_name || fab fa-telegram
-  #WeChat: /images/wechat_channel.jpg || fab fa-weixin
-  #RSS: /atom.xml || fa fa-rss
+  公众号: /images/wechat_channel.jpg || fab fa-weixin
+  RSS: /atom.xml || fa fa-rss
+  CSDN: https://blog.csdn.net/u012768510 || fas fa-code
+  知乎: https://www.zhihu.com/people/p205/posts || fab fa-zhihu
+  掘金: https://juejin.cn/user/3667626521269438/posts || fas fa-pen-nib
+  博客园: https://www.cnblogs.com/qq347061329 || fas fa-blog
+  简书: https://www.jianshu.com/u/65f51bc73109 || fas fa-book
+  OSCHINA: https://my.oschina.net/u/2460124 || fas fa-code-branch
+  SegmentFault: https://segmentfault.com/u/lixianqingliuyan/articles || fas fa-question-circle
 
 # Related popular posts
 # Dependencies: https://github.com/tea3/hexo-related-popular-posts
@@ -716,7 +723,7 @@ firestore:
 # Show Views / Visitors of the website / page with busuanzi.
 # Get more information on http://ibruce.info/2015/04/04/busuanzi
 busuanzi_count:
-  enable: false
+  enable: true
   total_visitors: true
   total_visitors_icon: fa fa-user
   total_views: true

@@ -3,16 +3,16 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: 离线de日常
+title: AI的奴隶
 subtitle:
-description: show me your code
+description: 一个程序员的工具折腾记录。Linux / Coding / AI / Agent / 自动化。分享真正用过的工具和工作流。打铁还要自生硬，不要做AI的奴隶。
 keywords:
   - AI
-  - Java
+  - Coding
   - Linux
-  - 后端
-  - 工具
-author: Mr.zhao
+  - Agent
+  - 自动化
+author: 离线请留言
 language: zh-CN
 # read utfOffset of null
 timezone: Asia/Shanghai
@@ -41,7 +41,7 @@ titlecase: false # Transform title into titlecase
 external_link:
   enable: true
   field: site # site | post
-  exclude: ''
+  exclude: ""
 filename_case: 0
 render_drafts: false
 post_asset_folder: false
@@ -52,22 +52,22 @@ syntax_highlighter: highlight.js
 highlight:
   line_number: true
   auto_detect: false
-  tab_replace: ''
+  tab_replace: ""
 
 # Markdown 渲染
 # breaks: false —— 关闭“软换行变 <br>”（hexo-renderer-marked 默认 true）
 marked:
   breaks: false
-  gfm: true  
+  gfm: true
 # Home page setting
 # path: Root path for your blogs index page. (default = '')
 # per_page: Posts displayed per page. (0 = disable pagination)
 # order_by: Posts order. (Order by date descending by default)
 index_generator:
-  path: ''
+  path: ""
   per_page: 10
   order_by: -date
-  
+
 # Category & Tag
 default_category: 未分类
 category_map:
@@ -95,8 +95,8 @@ theme: next
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
-- type: git
-  repo: git@github.com:zhaozhiwei1992/zhaozhiwei1992.github.io.git
+  - type: git
+    repo: git@github.com:zhaozhiwei1992/zhaozhiwei1992.github.io.git
 #   # example, https://zhaozhiwei1992.github.io/
 #- type: git
 #  repo: git@gitee.com:zhaozhiwei_1992/zhaozhiwei_1992.git
